@@ -1,0 +1,18 @@
+{
+  "name": "stylelint-formatter-table",
+  "version": "1.0.0",
+  "description": "stylelint-formatter-table",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stylelint"
+  ],
+  "author": "ccbikai <ccbikai@qq.com> (http://miantiao.me/)",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "table": "^4.0.1"
+  }
+}
