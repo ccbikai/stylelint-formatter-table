@@ -64,7 +64,7 @@ function drawTable(messages) {
 
     },
     drawHorizontalLine(index, size) {
-      return index === 0 || index === 1 || index === size - 1
+      return index === 0 || index === 1 || index === rows.length
     }
   })
 }
