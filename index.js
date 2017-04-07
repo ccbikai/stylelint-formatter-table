@@ -74,7 +74,7 @@ function drawCountTable(errorCount, warningCount) {
     let rows = [
         [chalk.red(pluralize("Error", errorCount, true))],
         [chalk.yellow(pluralize("Warning", warningCount, true))]
-    ];
+    ]
 
     return table(rows, {
         columns: {
@@ -84,20 +84,20 @@ function drawCountTable(errorCount, warningCount) {
             }
         },
         drawHorizontalLine() {
-            return true;
+            return true
         }
     })
 }
 
 module.exports = function(results) {
     let file = []
-    let errorCount = 0;
-    let warningCount = 0;
+    let errorCount = 0
+    let warningCount = 0
 
     results.forEach(message => {
         if (message.warnings && message.warnings.length) {
-            errorCount += message.warnings.filter(warning => warning.severity === 'error').length;
-            warningCount += message.warnings.filter(warning => warning.severity !== 'error').length;
+            errorCount += message.warnings.filter(warning => warning.severity === 'error').length
+            warningCount += message.warnings.filter(warning => warning.severity !== 'error').length
         }
 
         if (message.errored) {
@@ -106,10 +106,7 @@ module.exports = function(results) {
         }
     })
 
-    if (errorCount || warningCount) {
-        file.push(`Total:\n`)
-        file.push(`${drawCountTable(errorCount, warningCount)}\n`)
-    }
+    file.push(`${drawCountTable(errorCount, warningCount)}\n`)
 
     return file.join('')
 }
