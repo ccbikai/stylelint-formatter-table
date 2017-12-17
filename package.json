@@ -1,6 +1,6 @@
 {
   "name": "stylelint-formatter-table",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "stylelint-formatter-table",
   "main": "index.js",
   "scripts": {
